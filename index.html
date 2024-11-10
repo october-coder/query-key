@@ -1130,7 +1130,7 @@
         const isSpecificDomain = location.hostname === 'check.crond.dev';
         const message = `
         <div>
-            <p><strong>API CHECKER v1.4</strong></p>
+            <p><strong>API CHECKER v${VERSION}</strong></p>
             <br>
             <div>仓库地址:  <a href="https://github.com/QAbot-zh/query-key" target="_blank" style="color: #1e88e5">QAbot-zh/query-key</a></div><div>点点star 可以自行部署</div>
             <br>
@@ -1395,7 +1395,7 @@
 
         form.on('checkbox(checkAllChatOnly)', function (data) {
             const child = layero.find('input[name^="models"]');
-            const notChatPattern = /^(dall|mj|midjourney|stable-diffusion|playground|flux|swap_face|tts|whisper|text|emb|luma|vidu|pdf|suno|pika|chirp|domo|runway|cogvideo)/;
+            const notChatPattern = /^(dall|mj|midjourney|stable-diffusion|playground|flux|swap_face|tts|whisper|text|emb|luma|vidu|pdf|suno|pika|chirp|domo|runway|cogvideo|babbage|davinci|gpt-4o-realtime)/;
             child.each(function (index, item) {
                 const modelName = item.value;
                 item.checked = data.elem.checked && !notChatPattern.test(modelName) && !/(image|audio|video|music|pdf|flux|suno|embed)/.test(modelName);
